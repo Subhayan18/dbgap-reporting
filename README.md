@@ -1,5 +1,5 @@
 # dbgap-reporting
-A modded script for downloading lists of users which have approved dbGaP access requests forked from kids-first/dbgap-reporting
+A modded script for downloading lists of users which have all dbGaP access requests forked from kids-first/dbgap-reporting
 
 ## Background
 The [database of Genotypes and Phenotypes (dbGaP)](https://www.ncbi.nlm.nih.gov/gap/) is a tool managed by the National Center for Biotechnology Information (NCBI) in the National Library of Medicine, part of the National Insitutes of Health (NIH). The database serves as a catalog of studies which have investigated the interaction of genetic and phenotypic information in humans and allows for the distribution of this data to approved researchers for scientific projects.
