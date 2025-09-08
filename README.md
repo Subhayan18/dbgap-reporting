@@ -12,8 +12,8 @@ Information on approved requestors with authorized data access requests is also 
 
 ## Modifications
 The original script can not handle breaks in download and NCBI limits frequent download requests. To improve this, the modified code:
-# 1. Puts a lag between successive requests.
-# 2. Retries failed request if diconnected/ denied from server
+### 1. Puts a lag between successive requests.
+### 2. Retries failed request if diconnected/ denied from server
 
 ## Usage
 The list of studies in a sequence to be downloaded can be modified with...
