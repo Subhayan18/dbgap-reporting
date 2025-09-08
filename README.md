@@ -30,7 +30,7 @@ python3 phs_modified.py list-of-study-accessions.txt output.txt
 python3 phs_modified.py phs.4000_4100.txt phs.4000_4100_merged.txt
 ```
 ...where...
-- `phs.py` is the python script in this repo.
+- `phs_modified.py` is the updated python script in this forked repo.
 - `list-of-study-accessions.txt` is a text file with dbGaP study accessions, one per row. These should just include the six digit identifier and not include the version and participant set numbers. The script will automatically pull the latest version and participant set numbers for each study. An example list is provided in this repo as `phs.kf.txt`, which includes 36 studies available on the Kids First Portal.
 - `output.txt` is the name you wish to give the concatenated output file the script will generate.
 
