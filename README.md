@@ -8,19 +8,26 @@ Each study in dbGaP is assigned a **_study accession number_**, which begins wit
 
 Information on approved requestors with authorized data access requests is also publicly available on the dbGaP Study page for each individual study. This information includes the requestor's name, their institution, the date their project was approved, the current status of their project, and statements about the goals of their project. Information can be reviewed on the dbGaP website or downloaded for the specific study in question.
 
-The [Gabriella Miller Kids First Data Resource Center (Kids First DRC)](https://kidsfirstdrc.org/) is a collaborative pediatric research effort with the goal to understand the genetic causes and links between childhood cancer and congenital disorders. As part of this, the Kids First DRC is responsible for releasing high quality clinical and genomic datasets on the Kids First Portal to users with approved access via dbGaP. It is also in the interest of the Kids First DRC to track and report on the number of researchers which are applying for Kids First's controlled-access datasets on dbGaP.
+... 
 
-Due to the growing number of Kids First studies on dbGaP, the Kids First DRC developed this script to download information about approved requestors from a list of dbGaP study accession numbers in an automated manner. The script uses a list of study accession numbers as an input and outputs the list of approved requestors for each individual study as well as a concatenated version with all studies together.
+## Modifications
+The original script can not handle breaks in download and NCBI limits frequent download requests. To improve this, the modified code:
+# 1. Puts a lag between successive requests.
+# 2. Retries failed request if diconnected/ denied from server
 
 ## Usage
 The list of studies in a sequence to be downloaded can be modified with...
 ```
-seq -w 4000 4100 | awk '{print "phs" sprintf("%06d", $1)}' > phs.4000_4100_kf.txt
+seq -w 4000 4100 | awk '{print "phs" sprintf("%06d", $1)}' > phs.4000_4100.txt
 ```
 
 The script can be run using the following command...
 ```
-python3 phs.py list-of-study-accessions.txt output.txt
+python3 phs_modified.py list-of-study-accessions.txt output.txt
+
+# example
+
+python3 phs_modified.py phs.4000_4100.txt phs.4000_4100_merged.txt
 ```
 ...where...
 - `phs.py` is the python script in this repo.
