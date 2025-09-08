@@ -34,5 +34,4 @@ python3 phs_modified.py phs.4000_4100.txt phs.4000_4100_merged.txt
 - `list-of-study-accessions.txt` is a text file with dbGaP study accessions, one per row. These should just include the six digit identifier and not include the version and participant set numbers. The script will automatically pull the latest version and participant set numbers for each study. An example list is provided in this repo as `phs.kf.txt`, which includes 36 studies available on the Kids First Portal.
 - `output.txt` is the name you wish to give the concatenated output file the script will generate.
 
-The full list of molecular phentypes datasets from dbGaP was downloaded on September 05, 2025.
-Chattopadhyay et al., uses the unique_study column from that list for the discussed analyses.
+The list of molecular phentypes datasets from dbGaP was downloaded on September 05, 2025 with the modified script. Chattopadhyay et al., uses the unique_study column for the discussed analyses.
